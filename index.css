@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* --------------------------------------------------------------------------
+   CivicSphere AI — Premium Civic-Tech Visual Foundation
+   High-contrast, dignified government/civic SaaS design system.
+   Subtle layered surfaces, crisp specular borders, and refined depth.
+   -------------------------------------------------------------------------- */
+
+:root {
+  --civic-surface-bg: #f8fafc;
+  --civic-card-bg: #ffffff;
+  --civic-border-subtle: rgba(226, 232, 240, 0.85);
+  --civic-border-prominent: rgba(203, 213, 225, 0.95);
+  --civic-shadow-elevation: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  --civic-shadow-float: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.03);
+}
+
+/* Prevent horizontal viewport overflow on mobile */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Base smoothing and text crispness */
+body {
+  background-color: var(--civic-surface-bg);
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Discrete, modern scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.45);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.65);
+}
+
+/* Layered Card Surface Elevation:
+   Enhance white cards with multi-layered depth, crisp hairline borders,
+   and subtle top-edge ambient specular reflection. */
+.bg-white {
+  position: relative;
+}
+
+/* Subtle elevation polish for bordered white cards */
+.bg-white.border,
+.bg-white.border-slate-200,
+.bg-white.border-slate-200\/80,
+.bg-white.border-slate-200\/90 {
+  box-shadow: var(--civic-shadow-elevation);
+  border-color: rgba(226, 232, 240, 0.88);
+}
+
+/* Primary Action Buttons:
+   Civic navy gradient with top specular rim highlight and tactile feedback. */
+button.bg-slate-900,
+a.bg-slate-900,
+.bg-slate-900.text-white {
+  background-image: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.16);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button.bg-slate-900:hover,
+a.bg-slate-900:hover,
+.bg-slate-900.text-white:hover {
+  background-image: linear-gradient(180deg, #334155 0%, #1e293b 100%);
+  box-shadow: 0 3px 8px -1px rgba(15, 23, 42, 0.24), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+}
+
+button.bg-slate-900:active,
+a.bg-slate-900:active,
+.bg-slate-900.text-white:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.2), inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Secondary Action Buttons (White surface buttons) */
+button.bg-white.border,
+a.bg-white.border {
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04), inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button.bg-white.border:hover,
+a.bg-white.border:hover {
+  background-color: #f8fafc;
+  border-color: rgba(203, 213, 225, 0.9);
+  box-shadow: 0 2px 5px -1px rgba(15, 23, 42, 0.06);
+}
+
+button.bg-white.border:active,
+a.bg-white.border:active {
+  transform: translateY(1px);
+}
+
+/* Accessible focus ring defaults */
+:focus-visible {
+  outline: 2px solid #0f172a;
+  outline-offset: 2px;
+}
