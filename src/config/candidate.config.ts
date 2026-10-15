@@ -29,6 +29,6 @@ export const candidateConfig: CandidateConfig = {
   party: 'All Progressives Congress (APC)',
   motto: 'Empowering Citizens, Fostering Leadership & Driving Grassroots Innovation',
   // Specify image URL or relative asset path; null triggers a dignified civic heraldic monogram
-  photoUrl: null,
+  photoUrl: '/candidate-photo.png',
   displayDurationMs: 3800,
 };
